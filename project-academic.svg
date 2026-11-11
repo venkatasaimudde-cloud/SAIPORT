@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="acadBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020904"/>
+      <stop offset="60%" stop-color="#07190F"/>
+      <stop offset="100%" stop-color="#0D2B1A"/>
+    </linearGradient>
+    <linearGradient id="acadCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091E13"/>
+      <stop offset="100%" stop-color="#06140D"/>
+    </linearGradient>
+    <linearGradient id="emeraldGradP" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#20B45A"/>
+      <stop offset="100%" stop-color="#32D875"/>
+    </linearGradient>
+    <filter id="glowDrop" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="url(#acadBgGrad)"/>
+
+  <!-- Subtle grid lines -->
+  <g stroke="#20B45A" stroke-opacity="0.08" stroke-width="1">
+    <line x1="0" y1="50" x2="900" y2="50"/>
+    <line x1="0" y1="100" x2="900" y2="100"/>
+    <line x1="0" y1="150" x2="900" y2="150"/>
+    <line x1="0" y1="200" x2="900" y2="200"/>
+    <line x1="0" y1="250" x2="900" y2="250"/>
+    <line x1="0" y1="300" x2="900" y2="300"/>
+    <line x1="0" y1="350" x2="900" y2="350"/>
+    <line x1="0" y1="400" x2="900" y2="400"/>
+    <line x1="0" y1="450" x2="900" y2="450"/>
+    <line x1="100" y1="0" x2="100" y2="520"/>
+    <line x1="200" y1="0" x2="200" y2="520"/>
+    <line x1="300" y1="0" x2="300" y2="520"/>
+    <line x1="400" y1="0" x2="400" y2="520"/>
+    <line x1="500" y1="0" x2="500" y2="520"/>
+    <line x1="600" y1="0" x2="600" y2="520"/>
+    <line x1="700" y1="0" x2="700" y2="520"/>
+    <line x1="800" y1="0" x2="800" y2="520"/>
+  </g>
+
+  <!-- Ambient glow -->
+  <circle cx="650" cy="200" r="240" fill="#20B45A" opacity="0.12" filter="blur(60px)"/>
+
+  <!-- Main System Application Window -->
+  <g transform="translate(45, 30)">
+    <!-- Browser/App Outer Shell -->
+    <rect width="810" height="460" rx="14" fill="#040C07" stroke="#20B45A" stroke-width="1.5" stroke-opacity="0.4"/>
+    
+    <!-- App Header Bar -->
+    <rect width="810" height="52" rx="14" fill="#07170E"/>
+    <line x1="0" y1="52" x2="810" y2="52" stroke="#20B45A" stroke-opacity="0.25"/>
+
+    <!-- Window Dots -->
+    <circle cx="25" cy="26" r="6" fill="#FF5F56"/>
+    <circle cx="43" cy="26" r="6" fill="#FFBD2E"/>
+    <circle cx="61" cy="26" r="6" fill="#27C93F"/>
+
+    <!-- App Logo & Title -->
+    <g transform="translate(90, 15)">
+      <rect width="24" height="24" rx="6" fill="url(#emeraldGradP)"/>
+      <text x="7" y="17" fill="#030504" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="900">Ψ</text>
+      <text x="34" y="17" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Academic Paper Simplification System</text>
+      <text x="315" y="17" fill="#32D875" font-family="'JetBrains Mono', monospace" font-size="11">v2.4 [NLP Pipeline Active]</text>
+    </g>
+
+    <!-- Language Selector Pill in Header -->
+    <g transform="translate(560, 13)">
+      <rect width="70" height="26" rx="13" fill="#20B45A" fill-opacity="0.2" stroke="#20B45A" stroke-width="1"/>
+      <text x="14" y="17" fill="#32D875" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">English</text>
+
+      <rect x="78" y="0" width="76" height="26" rx="13" fill="#0B2416" stroke="#20B45A" stroke-opacity="0.4"/>
+      <text x="96" y="17" fill="#A6ADA8" font-family="system-ui, sans-serif" font-size="11">తెలుగు</text>
+
+      <rect x="162" y="0" width="70" height="26" rx="13" fill="#0B2416" stroke="#20B45A" stroke-opacity="0.4"/>
+      <text x="180" y="17" fill="#A6ADA8" font-family="system-ui, sans-serif" font-size="11">हिन्दी</text>
+    </g>
+
+    <!-- Workspace Grid: 2 Columns -->
+    <g transform="translate(24, 72)">
+      <!-- Left Box: Complex Academic Paper Input -->
+      <g>
+        <rect width="365" height="360" rx="10" fill="#030805" stroke="#183D27" stroke-width="1"/>
+        <rect width="365" height="38" rx="10" fill="#081A10"/>
+        <text x="16" y="24" fill="#A6ADA8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">INPUT: COMPLEX RESEARCH PAPER</text>
+        <rect x="260" y="8" width="90" height="22" rx="4" fill="#1C1408" stroke="#F59E0B" stroke-width="0.8"/>
+        <text x="268" y="23" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">Flesch-Kincaid: 17.4</text>
+
+        <!-- Document Content -->
+        <g transform="translate(18, 55)">
+          <text x="0" y="16" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Transformer-Based Graph Neural Networks</text>
+          <text x="0" y="32" fill="#20B45A" font-family="'JetBrains Mono', monospace" font-size="10">IEEE Transactions on Pattern Analysis (2025)</text>
+
+          <rect x="0" y="48" width="325" height="1" fill="#183D27"/>
+
+          <!-- Text lines simulating dense research paper -->
+          <text x="0" y="70" fill="#88958D" font-family="system-ui, sans-serif" font-size="11" font-style="italic">Abstract:</text>
+          <text x="0" y="90" fill="#88958D" font-family="system-ui, sans-serif" font-size="10.5">We propose an anisotropic multi-head attention</text>
+          <text x="0" y="108" fill="#88958D" font-family="system-ui, sans-serif" font-size="10.5">mechanism that mitigates oversmoothing in dense</text>
+          <text x="0" y="126" fill="#88958D" font-family="system-ui, sans-serif" font-size="10.5">heterogeneous manifolds by mapping topological</text>
+          <text x="0" y="144" fill="#88958D" font-family="system-ui, sans-serif" font-size="10.5">embeddings to latent non-Euclidean geodesics.</text>
+
+          <!-- Technical metrics box -->
+          <g transform="translate(0, 175)">
+            <rect width="325" height="100" rx="8" fill="#06120B" stroke="#183D27"/>
+            <text x="12" y="22" fill="#A6ADA8" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">Vocabulary Complexity: Extremely High</text>
+            <text x="12" y="42" fill="#A6ADA8" font-family="system-ui, sans-serif" font-size="10.5">Total Words: 4,820 • Jargon Density: 34.2%</text>
+            <rect x="12" y="60" width="300" height="8" rx="4" fill="#12261A"/>
+            <rect x="12" y="60" width="260" height="8" rx="4" fill="#E11D48"/>
+            <text x="12" y="85" fill="#FDA4AF" font-family="system-ui, sans-serif" font-size="10">Requires PhD-level comprehension</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Center Transformation Arrow -->
+      <g transform="translate(378, 160)">
+        <circle cx="11" cy="20" r="16" fill="url(#emeraldGradP)" filter="url(#glowDrop)"/>
+        <path d="M 6 20 L 14 20 M 11 15 L 16 20 L 11 25" fill="none" stroke="#030504" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <!-- Right Box: Multilingual Simplified Output -->
+      <g transform="translate(398, 0)">
+        <rect width="365" height="360" rx="10" fill="url(#acadCardGrad)" stroke="#20B45A" stroke-width="1.3"/>
+        <rect width="365" height="38" rx="10" fill="#0C2B1B"/>
+        <text x="16" y="24" fill="#32D875" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">✨ MULTILINGUAL SIMPLIFIED OUTPUT</text>
+        <rect x="250" y="8" width="100" height="22" rx="4" fill="#052414" stroke="#20B45A" stroke-width="0.8"/>
+        <text x="258" y="23" fill="#32D875" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">✓ Simplicity: 92%</text>
+
+        <g transform="translate(18, 55)">
+          <!-- English Simplified -->
+          <rect width="328" height="84" rx="8" fill="#081A10" stroke="#1D4A2F"/>
+          <text x="12" y="20" fill="#32D875" font-family="system-ui, sans-serif" font-size="11" font-weight="700">English Plain Explanation:</text>
+          <text x="12" y="38" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10.5">This paper invents an easier way for AI to</text>
+          <text x="12" y="54" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10.5">connect complex networks without getting confused</text>
+          <text x="12" y="70" fill="#A6ADA8" font-family="system-ui, sans-serif" font-size="10">when handling massive amounts of connected data.</text>
+
+          <!-- Telugu Output (Realistic Multilingual feature) -->
+          <g transform="translate(0, 94)">
+            <rect width="328" height="84" rx="8" fill="#081A10" stroke="#1D4A2F"/>
+            <text x="12" y="20" fill="#32D875" font-family="system-ui, sans-serif" font-size="11" font-weight="700">తెలుగు సారాంశం (Telugu Simplification):</text>
+            <text x="12" y="40" fill="#32D875" font-family="system-ui, sans-serif" font-size="11">ఆర్టిఫిషియల్ ఇంటెలిజెన్స్ (AI) భారీ డేటా నెట్‌వర్క్‌లను</text>
+            <text x="12" y="58" fill="#32D875" font-family="system-ui, sans-serif" font-size="11">సులభంగా మరియు తప్పులు లేకుండా నేర్చుకోవడానికి</text>
+            <text x="12" y="74" fill="#A6ADA8" font-family="system-ui, sans-serif" font-size="9.5">ఈ పరిశోధన కొత్త పరిష్కారాన్ని అందిస్తుంది.</text>
+          </g>
+
+          <!-- Hindi Output -->
+          <g transform="translate(0, 188)">
+            <rect width="328" height="74" rx="8" fill="#081A10" stroke="#1D4A2F"/>
+            <text x="12" y="20" fill="#32D875" font-family="system-ui, sans-serif" font-size="11" font-weight="700">हिन्दी अनुवाद (Hindi Simplification):</text>
+            <text x="12" y="40" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10.5">यह रिसर्च AI को जटिल डेटा नेटवर्क को आसानी से समझने</text>
+            <text x="12" y="58" fill="#A6ADA8" font-family="system-ui, sans-serif" font-size="10">और बिना रुकावट के हल करने में मदद करती है।</text>
+          </g>
+
+          <!-- Audio & Export Indicators -->
+          <g transform="translate(0, 272)">
+            <rect width="155" height="26" rx="13" fill="#0C2E1A" stroke="#20B45A" stroke-width="0.8"/>
+            <text x="16" y="17" fill="#32D875" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">🔊 Multilingual Audio Ready</text>
+
+            <rect x="165" y="0" width="163" height="26" rx="13" fill="#0C2E1A" stroke="#20B45A" stroke-width="0.8"/>
+            <text x="180" y="17" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">📄 Export PDF / Text Summary</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

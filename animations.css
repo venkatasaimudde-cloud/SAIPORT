@@ -1,0 +1,113 @@
+/* ==========================================================================
+   SAI.DEV - Animations & Micro-interactions
+   ========================================================================== */
+
+/* Subtle Ambient Glow Breathing */
+@keyframes ambient-breathe {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.15;
+  }
+  50% {
+    transform: scale(1.15) translate(20px, -20px);
+    opacity: 0.28;
+  }
+}
+
+.ambient-glow {
+  animation: ambient-breathe 9s ease-in-out infinite alternate;
+}
+
+/* Status Ring Pulse */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* Floating Elements (Hero Cards) */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.5deg);
+  }
+}
+
+@keyframes float-medium {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(-0.5deg);
+  }
+}
+
+/* Shimmer Highlight on Emerald Buttons */
+@keyframes emerald-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Reveal on Scroll Transitions */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-init.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delay classes */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* Subtle Badge Glow */
+@keyframes badge-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(193, 0, 5, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(229, 9, 20, 0.5);
+  }
+}
+
+.glow-subtle {
+  animation: badge-glow 4s ease-in-out infinite;
+}
+
+/* Marquee / Infinite loop if needed */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Rotating subtle geometric lines */
+@keyframes slow-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-slow {
+  animation: slow-spin 30s linear infinite;
+}

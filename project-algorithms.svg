@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="algoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020804"/>
+      <stop offset="50%" stop-color="#05160D"/>
+      <stop offset="100%" stop-color="#0B2717"/>
+    </linearGradient>
+    <linearGradient id="emeraldGradAlg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#20B45A"/>
+      <stop offset="100%" stop-color="#32D875"/>
+    </linearGradient>
+    <filter id="shadowAlg" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="520" fill="url(#algoBg)"/>
+
+  <!-- Subtle grid lines -->
+  <g stroke="#20B45A" stroke-opacity="0.08" stroke-width="1">
+    <line x1="0" y1="52" x2="900" y2="52"/><line x1="0" y1="104" x2="900" y2="104"/><line x1="0" y1="156" x2="900" y2="156"/>
+    <line x1="0" y1="208" x2="900" y2="208"/><line x1="0" y1="260" x2="900" y2="260"/><line x1="0" y1="312" x2="900" y2="312"/>
+    <line x1="0" y1="364" x2="900" y2="364"/><line x1="0" y1="416" x2="900" y2="416"/><line x1="0" y1="468" x2="900" y2="468"/>
+    <line x1="100" y1="0" x2="100" y2="520"/><line x1="200" y1="0" x2="200" y2="520"/><line x1="300" y1="0" x2="300" y2="520"/>
+    <line x1="400" y1="0" x2="400" y2="520"/><line x1="500" y1="0" x2="500" y2="520"/><line x1="600" y1="0" x2="600" y2="520"/>
+    <line x1="700" y1="0" x2="700" y2="520"/><line x1="800" y1="0" x2="800" y2="520"/>
+  </g>
+
+  <circle cx="450" cy="240" r="260" fill="#20B45A" opacity="0.12" filter="blur(70px)"/>
+
+  <!-- Code Engine Terminal Window -->
+  <g transform="translate(45, 30)" filter="url(#shadowAlg)">
+    <rect width="810" height="460" rx="14" fill="#030805" stroke="#20B45A" stroke-width="1.5" stroke-opacity="0.4"/>
+    
+    <!-- Titlebar -->
+    <rect width="810" height="48" rx="14" fill="#061209"/>
+    <line x1="0" y1="48" x2="810" y2="48" stroke="#20B45A" stroke-opacity="0.25"/>
+
+    <circle cx="25" cy="24" r="6" fill="#FF5F56"/>
+    <circle cx="43" cy="24" r="6" fill="#FFBD2E"/>
+    <circle cx="61" cy="24" r="6" fill="#27C93F"/>
+
+    <!-- Tab Bars -->
+    <g transform="translate(90, 8)">
+      <rect width="160" height="32" rx="6" fill="#0B2416" stroke="#20B45A" stroke-width="1"/>
+      <text x="14" y="21" fill="#32D875" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">graph_optimizer.py</text>
+
+      <rect x="170" y="0" width="130" height="32" rx="6" fill="#040D07" stroke="#183D27"/>
+      <text x="184" y="21" fill="#88958D" font-family="'JetBrains Mono', monospace" font-size="11">Dijkstra.java</text>
+
+      <rect x="310" y="0" width="115" height="32" rx="6" fill="#040D07" stroke="#183D27"/>
+      <text x="324" y="21" fill="#88958D" font-family="'JetBrains Mono', monospace" font-size="11">matrix_ops.c</text>
+    </g>
+
+    <!-- Editor Main Area -->
+    <g transform="translate(24, 68)">
+      <!-- Left: Code Lines (Python) -->
+      <g>
+        <rect width="490" height="370" rx="8" fill="#020603" stroke="#183D27"/>
+        
+        <!-- Line Numbers -->
+        <g fill="#184D2E" font-family="'JetBrains Mono', monospace" font-size="12">
+          <text x="12" y="30">01</text><text x="12" y="55">02</text><text x="12" y="80">03</text>
+          <text x="12" y="105">04</text><text x="12" y="130">05</text><text x="12" y="155">06</text>
+          <text x="12" y="180">07</text><text x="12" y="205">08</text><text x="12" y="230">09</text>
+          <text x="12" y="255">10</text><text x="12" y="280">11</text><text x="12" y="305">12</text>
+          <text x="12" y="330">13</text>
+        </g>
+
+        <!-- Syntax Highlighted Code -->
+        <g font-family="'JetBrains Mono', monospace" font-size="12">
+          <text x="46" y="30"><tspan fill="#32D875">import</tspan> <tspan fill="#FFFFFF">heapq</tspan></text>
+          <text x="46" y="55"><tspan fill="#32D875">from</tspan> <tspan fill="#FFFFFF">typing</tspan> <tspan fill="#32D875">import</tspan> <tspan fill="#FFFFFF">List, Dict, Tuple</tspan></text>
+          <text x="46" y="80"><tspan fill="#32D875">class</tspan> <tspan fill="#FFFFFF">GraphOptimizer</tspan>:</text>
+          <text x="68" y="105"><tspan fill="#32D875">def</tspan> <tspan fill="#FFFFFF">__init__</tspan>(<tspan fill="#20B45A">self</tspan>, num_nodes: <tspan fill="#32D875">int</tspan>):</text>
+          <text x="90" y="130"><tspan fill="#20B45A">self</tspan>.nodes = num_nodes</text>
+          <text x="90" y="155"><tspan fill="#20B45A">self</tspan>.adj = {i: [] <tspan fill="#32D875">for</tspan> i <tspan fill="#32D875">in</tspan> <tspan fill="#FFFFFF">range</tspan>(num_nodes)}</text>
+          <text x="68" y="180"><tspan fill="#32D875">def</tspan> <tspan fill="#FFFFFF">dijkstra_shortest_path</tspan>(<tspan fill="#20B45A">self</tspan>, src, dst):</text>
+          <text x="90" y="205">dist = {node: <tspan fill="#32D875">float</tspan>(<tspan fill="#A6ADA8">'inf'</tspan>) <tspan fill="#32D875">for</tspan> node <tspan fill="#32D875">in</tspan> <tspan fill="#20B45A">self</tspan>.adj}</text>
+          <text x="90" y="230">dist[src] = <tspan fill="#32D875">0</tspan>; pq = [(<tspan fill="#32D875">0</tspan>, src)]</text>
+          <text x="90" y="255"><tspan fill="#32D875">while</tspan> pq: c, u = heapq.heappop(pq)</text>
+          <text x="112" y="280"><tspan fill="#32D875">if</tspan> u == dst: <tspan fill="#32D875">return</tspan> {<tspan fill="#A6ADA8">"cost"</tspan>: c, <tspan fill="#A6ADA8">"status"</tspan>: <tspan fill="#32D875">True</tspan>}</text>
+          <text x="112" y="305"><tspan fill="#32D875">for</tspan> v, w <tspan fill="#32D875">in</tspan> <tspan fill="#20B45A">self</tspan>.adj[u]:</text>
+          <text x="134" y="330"><tspan fill="#32D875">if</tspan> dist[u] + w &lt; dist[v]: dist[v] = dist[u] + w</text>
+        </g>
+      </g>
+
+      <!-- Right: Benchmark Execution Panel -->
+      <g transform="translate(506, 0)">
+        <rect width="256" height="370" rx="8" fill="#06160D" stroke="#20B45A" stroke-width="1.2"/>
+        
+        <rect width="256" height="36" rx="8" fill="#0A2416"/>
+        <text x="14" y="23" fill="#32D875" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">⚡ BENCHMARK RESULTS</text>
+
+        <g transform="translate(16, 52)">
+          <text x="0" y="14" fill="#A6ADA8" font-family="system-ui, sans-serif" font-size="11">Algorithm Complexity</text>
+          <text x="0" y="32" fill="#FFFFFF" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold">O((V + E) log V)</text>
+
+          <rect x="0" y="46" width="224" height="1" fill="#184D2E"/>
+
+          <text x="0" y="66" fill="#A6ADA8" font-family="system-ui, sans-serif" font-size="11">Test Suite Pass Rate</text>
+          <text x="0" y="86" fill="#32D875" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold">128 / 128 (100% Passed) ✓</text>
+
+          <rect x="0" y="100" width="224" height="1" fill="#184D2E"/>
+
+          <text x="0" y="120" fill="#A6ADA8" font-family="system-ui, sans-serif" font-size="11">Execution Runtime</text>
+          <text x="0" y="138" fill="#FFFFFF" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold">12.4 ms (98.9th %ile)</text>
+
+          <!-- Graph/Bar visual -->
+          <g transform="translate(0, 160)">
+            <text x="0" y="0" fill="#A6ADA8" font-family="system-ui, sans-serif" font-size="10.5">Memory Convergence:</text>
+            <rect x="0" y="12" width="224" height="14" rx="4" fill="#020804"/>
+            <rect x="0" y="12" width="205" height="14" rx="4" fill="url(#emeraldGradAlg)"/>
+            <text x="50" y="23" fill="#030504" font-family="system-ui, sans-serif" font-size="9" font-weight="900">OPTIMAL MEMORY USAGE</text>
+          </g>
+
+          <!-- Language Badges -->
+          <g transform="translate(0, 220)">
+            <rect width="68" height="24" rx="4" fill="#082816" stroke="#20B45A"/>
+            <text x="13" y="16" fill="#32D875" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">Python</text>
+
+            <rect x="76" y="0" width="60" height="24" rx="4" fill="#082816" stroke="#20B45A"/>
+            <text x="89" y="16" fill="#32D875" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">Java</text>
+
+            <rect x="144" y="0" width="80" height="24" rx="4" fill="#082816" stroke="#20B45A"/>
+            <text x="156" y="16" fill="#32D875" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">C Lang</text>
+          </g>
+
+          <g transform="translate(0, 260)">
+            <rect width="224" height="32" rx="6" fill="#020804" stroke="#32D875" stroke-opacity="0.4"/>
+            <text x="24" y="21" fill="#32D875" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="bold">STATUS: PRODUCTION READY</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
