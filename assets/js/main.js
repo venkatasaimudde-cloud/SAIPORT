@@ -331,4 +331,49 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 700);
     });
   }
+
+  // --------------------------------------------------------------------------
+  // Certificate Lightbox Handler
+  // --------------------------------------------------------------------------
+  const certLightbox = document.getElementById('cert-lightbox');
+  const certLightboxImg = document.getElementById('cert-lightbox-img');
+  const certLightboxTitle = document.getElementById('cert-lightbox-title');
+  const certLightboxDownload = document.getElementById('cert-lightbox-download');
+  const certLightboxClose = document.querySelector('.cert-lightbox-close');
+  const certBackdrop = document.querySelector('.cert-lightbox-backdrop');
+
+  const openCertModal = (src, title) => {
+    if (!certLightbox || !certLightboxImg) return;
+    certLightboxImg.src = src;
+    certLightboxImg.alt = title;
+    if (certLightboxTitle) certLightboxTitle.textContent = title;
+    if (certLightboxDownload) certLightboxDownload.href = src;
+    certLightbox.classList.add('active');
+    certLightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeCertModal = () => {
+    if (!certLightbox) return;
+    certLightbox.classList.remove('active');
+    certLightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  document.querySelectorAll('[data-cert-src]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      const src = el.getAttribute('data-cert-src');
+      const title = el.getAttribute('data-cert-title') || 'Certificate Preview';
+      openCertModal(src, title);
+    });
+  });
+
+  if (certLightboxClose) certLightboxClose.addEventListener('click', closeCertModal);
+  if (certBackdrop) certBackdrop.addEventListener('click', closeCertModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && certLightbox && certLightbox.classList.contains('active')) {
+      closeCertModal();
+    }
+  });
 });
