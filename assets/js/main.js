@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isLight) {
         document.documentElement.removeAttribute('data-theme');
         localStorage.setItem('sai_portfolio_theme', 'dark');
-        if (window.showToast) window.showToast('🌙 Dark Mode Activated');
+        if (window.showToast) window.showToast('🌙 Black Theme Activated');
       } else {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('sai_portfolio_theme', 'light');
-        if (window.showToast) window.showToast('☀️ Light Mode Activated');
+        if (window.showToast) window.showToast('🌊 Ocean Slate Theme Activated');
       }
     });
   }
@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (formStatus) {
           formStatus.style.display = 'block';
           formStatus.innerHTML = `
-            <div style="background: rgba(193, 0, 5, 0.15); border: 1px solid var(--accent-bright-green); padding: 14px; border-radius: var(--radius-sm); color: #FFFFFF; margin-top: 15px; font-size: 0.92rem; line-height: 1.5;">
+            <div style="background: rgba(215, 255, 0, 0.12); border: 1px solid var(--accent-bright-green); padding: 14px; border-radius: var(--radius-sm); color: #FFFFFF; margin-top: 15px; font-size: 0.92rem; line-height: 1.5;">
               ✓ <strong>Message dispatched to venkatasaimudde@gmail.com!</strong> An email composer has also been launched on your device.
             </div>
           `;
