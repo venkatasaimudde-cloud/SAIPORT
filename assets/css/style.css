@@ -699,6 +699,9 @@ code, pre {
   color: var(--text-secondary);
   transition: all var(--transition-normal);
   position: relative;
+  /* No glassmorphism — solid background only */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .social-link:hover {
@@ -716,6 +719,26 @@ code, pre {
 
 .social-link:hover svg {
   transform: scale(1.1);
+}
+/* ═══ Ocean Slate Theme — Social Icons: Solid White Background ═══ */
+[data-theme="light"] .social-link {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(63, 100, 120, 0.25);
+  color: #2C4A5A;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+[data-theme="light"] .social-link:hover {
+  background: #F0F8FF;
+  border-color: #D7FF00;
+  color: #1A3444;
+  box-shadow: 0 6px 18px rgba(63, 100, 120, 0.30), 0 0 12px rgba(215, 255, 0, 0.35);
+  transform: translateY(-3px);
+}
+
+[data-theme="light"] .social-link svg {
+  color: inherit;
 }
 
 /* Right Hero Profile Visual */
